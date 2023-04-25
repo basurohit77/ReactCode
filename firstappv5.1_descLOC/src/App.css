@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin%20Sans:wght@300&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #d2dbdd;
+    font-family: "Josefin Scans";
+}
+
+div {
+    width: 100%;
+    height: 100vh;
+    background: #8e44ad;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    background: transparent;
+    text-shadow: 0 2px 2px black;
+}
+
+input {
+    width: 90%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin: 20px 0;
+    text-align: center;
+}
+
+button {
+    line-height: 20px;
+    padding: 0 20px;
+    background: #422174;
+    color: white;
+    border: 2px solid #ecf0f1;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* body {
+    background: #f3f2ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Jost", sans-serif;
+} */
+
+.main_div {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }

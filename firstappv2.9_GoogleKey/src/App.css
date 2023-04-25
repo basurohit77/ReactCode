@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  /* height: 10vh; */
+  background-image: linear-gradient(to left, #d2c8d0, #607cf5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+.App-logo {
+  width: 30%;
+  /* height: 10vh; */
+  line-height: 90px;
+  /* background-color: hsl(252, 7%, 73%); */
+  text-align: center;
+  /* float: left; */
+  border: 2px solid black;
+}
+
+.text-logo{
+  width: 70%;
+  /* height: 10vh; */
+  line-height: 90px;
+  text-align: right;
+  /* background-color: rgb(121, 162, 180); */
+  /* float: right; */
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.createnote_head {
+  float: right;
+ }
+
+.main_note {
+  width: 500px;
+  height: 200px;
+  background-color: rgb(107, 164, 214);
+  overflow-y: scroll;
+  box-shadow: 4px 4px 5px 4px grey;
+  position: relative;
+  
+}
+
+input {
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+textarea {
+  height: 50px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.add_sign {
+  margin-bottom: 10px;
+  margin-right: 20px;
+  background-color: rgb(195, 194, 199);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-shadow: 4px 4px 5px 4px grey;
+
+}
+
+.note {
+    position: relative;
+    font-family: inherit;
+    font-size: 1.1rem;
+    border: 2px solid black;
+    border-right: 4px solid black;
+    height: 150px;
+    width: 20%;
+    margin-top: 1rem;
+    padding: 10px;
+    overflow-y: scroll;
+    background-color: cyan;
+    overflow-y: scroll;
+    float: left;
+}
+
+.note_del_btn {
+  position: absolute;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  bottom: 0;
+  right: 0;
+  box-shadow: 4px 4px 5px 4px grey;
+}
+
+@keyframes App-logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(to left, #F650FE, #607bf5);
+}
+
+.foottext {
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 2px cyan;
+  transition-property: transform;
+  transition-duration: 2s;
+}
+
+.foottext:hover {
+  transform: scale(2, 2);
+  /* transform: rotate(360deg); */
+}
+
+.flex_css {
+  width: 100%; height: 70px;
+  background-image: linear-gradient(to left, #d2c8d0, #607cf5);
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-around;
+}
+

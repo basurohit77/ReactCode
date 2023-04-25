@@ -1,0 +1,3 @@
+Comp to Comp msg pass is not possible.
+Comp to Parent and Parent to Comp is possible.
+So, if Comp to Comp connection req then a common Parent is req.
