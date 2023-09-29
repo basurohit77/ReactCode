@@ -72,11 +72,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Relation of Store Reducer and Dispatcher
 1) STORE: /src/client/index.js
    
-First create a Store and publish the store with Provider from the top(Root) level.
-  const store = createStore(reducer, applyMiddleware(thunk, logger));
-	render(
-  	   <Provider store={store}>
-   		<I18nextProvider i18n={i18n}>
+   First create a Store and publish the store with Provider from the top(Root) level.
+
+   const store = createStore(reducer, applyMiddleware(thunk, logger));
+   	render(
+         <Provider store={store}>
+	 	<I18nextProvider i18n={i18n}>
    		<PageEntry />
    		</I18nextProvider>
 	   </Provider>,
@@ -85,15 +86,15 @@ First create a Store and publish the store with Provider from the top(Root) leve
 
 Store will attach a RootReducer 
 
-3) ROOTREDUCER: /src/client/redux/Reducers/RootReducer.js
-   
-	RootReducer is the single entry point for all the reducers defined, as it combineReducers
+2) ROOTREDUCER: /src/client/redux/Reducers/RootReducer.js
+   RootReducer is the single entry point for all the reducers defined, as it combineReducers
 
-5) REDUCER: /src/client/redux/Reducers/UserReducer.js
+
+3) REDUCER: /src/client/redux/Reducers/UserReducer.js
 	Reducers hold the state (prev/current) of the variables, needed in the Form/UI.
 	Reducer update the state of the variable  according to the ACTION.
 
-6) ACTION: /src/client/redux/ActionTypes/UserActions.js
+5) ACTION: /src/client/redux/ActionTypes/UserActions.js
    
 	 Actions are the functions defined, which return a action type with payload, if applicable.
 	 	const fetchUserDataBegin = () => ({
@@ -104,7 +105,7 @@ Store will attach a RootReducer
 	 
    But if the payload is big, better use action function.
  
- 8) DISPATCHER: When ever an event happen on a Form/UI, if we want to preserve/update the state 
+ 6) DISPATCHER: When ever an event happen on a Form/UI, if we want to preserve/update the state 
 				        of a component and also to view it in different component, we use dispatcher.
 
 				A) Function Component:
