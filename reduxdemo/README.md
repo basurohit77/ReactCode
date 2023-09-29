@@ -120,12 +120,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ```
 	const dispatch = useDispatch();
 ```				     
-	Dispatch is able to find the Store of the application from PROVIDER.
-	STORE knows the ROOTREDUCER.
- 	With the help of Dispatcher we can wrap an ACTION and a Payload. 
-	STORE will find the ROOTREDUCER. 
-	ROOTREDUCER according to the ACTION-Type will call a designated REDUCER., where the State will be saved.
-	Once the state is saved in the  Reducer and store inside the STORE, we can fetch it in any component by using useSelector
+       Dispatch is able to find the Store of the application from PROVIDER.
+       STORE knows the ROOTREDUCER.
+       With the help of Dispatcher we can wrap an ACTION and a Payload. 
+       STORE will find the ROOTREDUCER. 
+       ROOTREDUCER according to the ACTION-Type will call a designated REDUCER., where the State will be saved.
+       Once the state is saved in the  Reducer and store inside the STORE, we can fetch it in any component by using useSelector
+       
  ```
 	const myState4 = useSelector((state) => state.productsReducer)
 ```
