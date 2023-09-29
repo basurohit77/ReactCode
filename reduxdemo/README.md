@@ -84,7 +84,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 	   getAppRootElement(),
 	);
 ```
-Store will attach a RootReducer 
+   Store will attach a RootReducer 
 
 2) ROOTREDUCER: /src/client/redux/Reducers/RootReducer.js
    
@@ -99,6 +99,7 @@ Store will attach a RootReducer
 4) ACTION: /src/client/redux/ActionTypes/UserActions.js
    
    Actions are the functions defined, which return a action type with payload, if applicable.
+   
    ```
     const fetchUserDataBegin = () => ({
    	type: c.S_FETCH_USER_DATA_BEGIN,
@@ -110,7 +111,7 @@ Store will attach a RootReducer
    ```
    But if the payload is big, better use action function.
  
- 5) DISPATCHER: When ever an event happen on a Form/UI, if we want to preserve/update the state 
+ 6) DISPATCHER: When ever an event happen on a Form/UI, if we want to preserve/update the state 
     of a component and also to view it in different component, we use dispatcher.
     
 	A) Function Component:
