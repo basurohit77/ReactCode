@@ -73,7 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 1) STORE: /src/client/index.js
    
    First create a Store and publish the store with Provider from the top(Root) level.
-
+```
    const store = createStore(reducer, applyMiddleware(thunk, logger));
    	render(
          <Provider store={store}>
@@ -83,7 +83,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 	   </Provider>,
 	   getAppRootElement(),
 	);
-
+```
 Store will attach a RootReducer 
 
 2) ROOTREDUCER: /src/client/redux/Reducers/RootReducer.js
@@ -94,7 +94,7 @@ Store will attach a RootReducer
 	Reducers hold the state (prev/current) of the variables, needed in the Form/UI.
 	Reducer update the state of the variable  according to the ACTION.
 
-5) ACTION: /src/client/redux/ActionTypes/UserActions.js
+4) ACTION: /src/client/redux/ActionTypes/UserActions.js
    
 	 Actions are the functions defined, which return a action type with payload, if applicable.
 	 	const fetchUserDataBegin = () => ({
@@ -105,7 +105,7 @@ Store will attach a RootReducer
 	 
    But if the payload is big, better use action function.
  
- 6) DISPATCHER: When ever an event happen on a Form/UI, if we want to preserve/update the state 
+ 5) DISPATCHER: When ever an event happen on a Form/UI, if we want to preserve/update the state 
 				        of a component and also to view it in different component, we use dispatcher.
 
 				A) Function Component:
