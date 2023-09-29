@@ -71,19 +71,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Relation of Store Reducer and Dispatcher
 1) STORE: /src/client/index.js
-   
-	 First create a Store and publish the store with Provider from the top(Root) level.
-		const store = createStore(reducer, applyMiddleware(thunk, logger));
-		render(
-  			<Provider store={store}>
-   			 	<I18nextProvider i18n={i18n}>
-      				<PageEntry />
-   				 </I18nextProvider>
- 			 </Provider>,
- 			 getAppRootElement(),
-		);
+First create a Store and publish the store with Provider from the top(Root) level.
+  const store = createStore(reducer, applyMiddleware(thunk, logger));
+	render(
+  	   <Provider store={store}>
+   		<I18nextProvider i18n={i18n}>
+   		<PageEntry />
+   		</I18nextProvider>
+	   </Provider>,
+	   getAppRootElement(),
+	);
 
-	Store will attach a RootReducer 
+Store will attach a RootReducer 
 
 3) ROOTREDUCER: /src/client/redux/Reducers/RootReducer.js
    
