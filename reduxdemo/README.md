@@ -87,59 +87,70 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Store will attach a RootReducer 
 
 2) ROOTREDUCER: /src/client/redux/Reducers/RootReducer.js
+   
    RootReducer is the single entry point for all the reducers defined, as it combineReducers
 
 
 3) REDUCER: /src/client/redux/Reducers/UserReducer.js
-	Reducers hold the state (prev/current) of the variables, needed in the Form/UI.
-	Reducer update the state of the variable  according to the ACTION.
+   
+   Reducers hold the state (prev/current) of the variables, needed in the Form/UI.
+   Reducer update the state of the variable  according to the ACTION.
 
 4) ACTION: /src/client/redux/ActionTypes/UserActions.js
    
-	 Actions are the functions defined, which return a action type with payload, if applicable.
-	 	const fetchUserDataBegin = () => ({
-    			type: c.S_FETCH_USER_DATA_BEGIN,
-	 	});
-	 Actions are optional, as we can define the action within the dispatcher.
-	 	dispatch({type: "c.S_FETCH_USER_DATA_BEGIN", payload: {}});
-	 
+   Actions are the functions defined, which return a action type with payload, if applicable.
+   ```
+    const fetchUserDataBegin = () => ({
+   	type: c.S_FETCH_USER_DATA_BEGIN,
+     });
+   ```
+   Actions are optional, as we can define the action within the dispatcher.
+   ```
+      dispatch({type: "c.S_FETCH_USER_DATA_BEGIN", payload: {}});
+   ```
    But if the payload is big, better use action function.
  
  5) DISPATCHER: When ever an event happen on a Form/UI, if we want to preserve/update the state 
-				        of a component and also to view it in different component, we use dispatcher.
+    of a component and also to view it in different component, we use dispatcher.
+    
+	A) Function Component:
 
-				A) Function Component:
-
-					We create a Dispatcher with useDispatch.  (/node_modules/react-redux/es/hooks/useDispatch.js)
-				  const dispatch = useDispatch();
-				     
-				    Dispatch is able to find the Store of the application from PROVIDER.
-				    STORE knows the ROOTREDUCER.
-            With the help of Dispatcher we can wrap an ACTION and a Payload. 
-				    STORE will find the ROOTREDUCER. 
-				    ROOTREDUCER according to the ACTION-Type will call a designated REDUCER., where the State will be saved.
-				    Once the state is saved in the  Reducer and store inside the STORE, we can fetch it in any component by using useSelector
-					 	    const myState4 = useSelector((state) => state.productsReducer)
-            Here `productsReducer` is a particular Reducer.
+	We create a Dispatcher with useDispatch.  (/node_modules/react-redux/es/hooks/useDispatch.js)
+```
+	const dispatch = useDispatch();
+```				     
+	Dispatch is able to find the Store of the application from PROVIDER.
+	STORE knows the ROOTREDUCER.
+ 	With the help of Dispatcher we can wrap an ACTION and a Payload. 
+	STORE will find the ROOTREDUCER. 
+	ROOTREDUCER according to the ACTION-Type will call a designated REDUCER., where the State will be saved.
+	Once the state is saved in the  Reducer and store inside the STORE, we can fetch it in any component by using useSelector
+ ```
+	const myState4 = useSelector((state) => state.productsReducer)
+```
+        Here `productsReducer` is a particular Reducer.
 				   
        B) Class Component:
     
-					With the help of Dispatcher we can wrap an ACTION and a Payload. 
-					We use mapDispatchToProps function to wrap up our dispatcher, so that it can be link to the Store.
-				    var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  		        return {
+	With the help of Dispatcher we can wrap an ACTION and a Payload. 
+	We use mapDispatchToProps function to wrap up our dispatcher, so that it can be link to the Store.
+ ```
+	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+ 		return {
    	            removeNotification: function removeNotification(id) {
-                  return dispatch((0, _NotificationActions.removeNotification)(id));
-                }
- 							};
-				    };
+                  	return dispatch((0, _NotificationActions.removeNotification)(id));
+                    }
+		};
+	};
 
-				  Also to fetch the values store in the STORE we need a function mapStateToProps
-						var mapStateToProps = function mapStateToProps(state) {
-  							return {
-                  notifications: state.notifications.notifications
- 							 };
-						};
+	Also to fetch the values store in the STORE we need a function mapStateToProps
+```
+	var mapStateToProps = function mapStateToProps(state) {
+ 				return {
+                  			notifications: state.notifications.notifications
+ 				};
+	  		     };
+```
 
 
 
