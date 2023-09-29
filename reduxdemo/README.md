@@ -117,9 +117,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 	A) Function Component:
 
 	We create a Dispatcher with useDispatch.  (/node_modules/react-redux/es/hooks/useDispatch.js)
-```
+	```
 	const dispatch = useDispatch();
-```				     
+	```				     
        Dispatch is able to find the Store of the application from PROVIDER.
        STORE knows the ROOTREDUCER.
        With the help of Dispatcher we can wrap an ACTION and a Payload. 
@@ -127,9 +127,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
        ROOTREDUCER according to the ACTION-Type will call a designated REDUCER., where the State will be saved.
        Once the state is saved in the  Reducer and store inside the STORE, we can fetch it in any component by using useSelector
        
- ```
+	 ```
 	const myState4 = useSelector((state) => state.productsReducer)
-```
+	```
         Here `productsReducer` is a particular Reducer.
 				   
        B) Class Component:
