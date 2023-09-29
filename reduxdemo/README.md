@@ -126,17 +126,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
        STORE will find the ROOTREDUCER. 
        ROOTREDUCER according to the ACTION-Type will call a designated REDUCER., where the State will be saved.
        Once the state is saved in the  Reducer and store inside the STORE, we can fetch it in any component by using useSelector
-       
-	 ```
+	```
 	const myState4 = useSelector((state) => state.productsReducer)
 	```
-        Here `productsReducer` is a particular Reducer.
+       Here `productsReducer` is a particular Reducer.
 				   
        B) Class Component:
     
 	With the help of Dispatcher we can wrap an ACTION and a Payload. 
 	We use mapDispatchToProps function to wrap up our dispatcher, so that it can be link to the Store.
- ```
+ 	```
 	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
  		return {
    	            removeNotification: function removeNotification(id) {
@@ -144,15 +143,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
                     }
 		};
 	};
-
+  	```
 	Also to fetch the values store in the STORE we need a function mapStateToProps
-```
+	```
 	var mapStateToProps = function mapStateToProps(state) {
  				return {
                   			notifications: state.notifications.notifications
  				};
 	  		     };
-```
-
-
-
+	```
